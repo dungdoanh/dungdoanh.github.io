@@ -1,0 +1,68 @@
+/* Thiết lập chung */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Kiểu thẻ card chứa link */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px; /* Khoảng cách giữa các card */
+    flex-grow: 1;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-decoration: none; /* Bỏ gạch chân link */
+    color: #333;
+    padding: 20px;
+    width: 100%; /* Mặc định full chiều rộng trên di động */
+    max-width: 400px; /* Chiều rộng tối đa trên desktop */
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+/* Media Query cho màn hình lớn hơn */
+@media (min-width: 600px) {
+    .card {
+        width: calc(50% - 20px); /* 2 card trên 1 hàng trên màn hình rộng */
+    }
+}
